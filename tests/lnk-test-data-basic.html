@@ -1,0 +1,66 @@
+<!--
+LNK-TEST-DATA (tests/lnk-test-data-basic.html) - Basic test code for this CapLnk component.
+
+Copyright (C) 2014 by Gregory J Lamoree
+
+This file is part of the LNK-TEST-DATA component which is part of the
+CapLnk (Component - Application - Link) suite of components. 
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>lnk-test-data</title>
+
+  <script src="../../platform/platform.js"></script>
+  <link rel="import" href="../../polymer-test-tools/tools.html">
+  <script src="../../polymer-test-tools/htmltest.js"></script>
+  
+  <!-- Step 1: import the element to test -->
+  <link rel="import" href="../lnk-test-data.html">
+
+</head>
+<body>
+
+  <lnk-test-data></lnk-test-data>
+
+  <script>
+
+    document.addEventListener('polymer-ready', function() {
+      // Test a property
+      var myEl = document.querySelector('lnk-test-data');
+      assert.equal(myEl.author, 'Gregory J Lamoree');
+
+      // Test a method
+      var hello = myEl.sayHello();
+      assert.equal(hello, 'lnk-test-data says, Hello World!');
+      var greetings = myEl.sayHello('greetings Earthlings');
+      assert.equal(greetings, 'lnk-test-data says, greetings Earthlings');
+
+      // Test an event
+      myEl.addEventListener('lnk-test-data-lasers-success', function(event) {
+        assert.equal(event.detail.sound, 'Pew pew pew!');
+        // IMPORTANT:
+        // Make sure to call done() at the end of every test suite!
+        done(); 
+      });
+      myEl.fireLasers();
+    });
+
+  </script>
+
+</body>
+</html>

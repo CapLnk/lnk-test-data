@@ -1,0 +1,23 @@
+{
+  "name": "lnk-test-data",
+  "version": "0.1.0",
+  "authors": [
+    "Anonymous <glamoree@randomminds.com>"
+  ],
+  "description": "CapLnk Component for creating client side test data.",
+  "keywords": "lnk-test-data, caplnk, polymer, web-components",
+  "main": "lnk-test-data.html",
+  "license": "LGPL V3",
+  "homepage": "https://github.com/CapLnk/lnk-test-data",
+  "ignore": [
+    "**/.*",
+    "test",
+    "tests",
+    ".bowerrc",
+    "*.*~"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#>=0.4.0 <1.0.0",
+    "polymer-test-tools": "Polymer/polymer-test-tools#>=0.4.0 <1.0.0"
+  }
+}

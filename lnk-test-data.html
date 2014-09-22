@@ -1,0 +1,42 @@
+<!--
+LNK-TEST-DATA (lnk-test-data.html) - HTML code for this CapLnk component.
+
+Copyright (C) 2014 by Gregory J Lamoree
+
+This file is part of the LNK-TEST-DATA component which is part of the
+CapLnk (Component - Application - Link) suite of components. 
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+    CapLnk Component for creating client side test data.
+    
+    ##### Example
+    
+        <lnk-test-data></lnk-test-data>
+    
+    @element lnk-test-data
+    @blurb CapLnk Component for creating client side test data.
+    @status alpha
+    @homepage http://caplnk.github.io/caplnk/lnk-test-data
+-->
+<polymer-element name="lnk-test-data" attributes="type" type="paragraph()">
+
+    <template>{{testData}}</template>
+
+  <script src="lnk-test-data.js"></script>
+
+</polymer-element>
